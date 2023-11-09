@@ -1,0 +1,6 @@
+import java.util.Scanner;
+public class NestedLopp_NIM{
+    public static void main(String[] args){
+
+    }
+}
