@@ -5,6 +5,7 @@ public class Quiz{
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         char menu = 'y';
+
         do{
             int number = random.nextInt(10) + 1;
             boolean success = false;
@@ -12,7 +13,12 @@ public class Quiz{
                 System.out.print("Tebak angka (1-10): ");
                 int answer = input.nextInt();
                 input.nextLine();
-                success = (answer == number);
+
+                if (answer == number){
+                    success=true;
+                } else {
+                    System.out.println("Tebakan Anda " + ((answer < number) ? "lebih kecil" : "lebih besar") + " dari jawaban.");
+                }
             } while(!success);
             System.out.print("Apakah Anda ingin mengulang permainan (Y/y)?");
             menu = input.nextLine().charAt(0);
